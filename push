@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "Input your massage"
+read X
+git add .
+git commit -m "${X}"
+git push

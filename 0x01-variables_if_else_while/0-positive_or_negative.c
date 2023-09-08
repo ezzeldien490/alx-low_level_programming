@@ -14,7 +14,8 @@ int main(void)
 
 	if (n > 0)
 	{
-		int n + 98;
+		int n = 98;
+
 		printf("%d is positive\n", n);
 	}
 

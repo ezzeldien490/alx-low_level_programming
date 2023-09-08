@@ -18,12 +18,14 @@ int main(void)
 	{
 		printf("%d is positive\n", n);
 	}
+
 	n = -98;
 
 	if (n == 0)
 	{
 		printf("%d is zero\n", n);
 	}
+
 	n = 0;
 
 	if (n < 0)

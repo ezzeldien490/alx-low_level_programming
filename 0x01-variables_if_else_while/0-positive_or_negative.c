@@ -10,21 +10,21 @@
 
 int main(void)
 {
-	int n = 0;
+	int n;
+
+	n = 98;
 
 	if (n > 0)
 	{
-		int n = 98;
-
 		printf("%d is positive\n", n);
 	}
+	n = -98;
 
 	if (n == 0)
 	{
-		int n = -98;
-
 		printf("%d is zero\n", n);
 	}
+	n = 0;
 
 	if (n < 0)
 	{

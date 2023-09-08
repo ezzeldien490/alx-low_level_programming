@@ -12,28 +12,22 @@ int main(void)
 {
 	int n;
 
-	n = 98;
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
 
 	if (n > 0)
 	{
 		printf("%d is positive\n", n);
 	}
 
-	n = -98;
-
-	if (n == 0)
+	else if (n == 0)
 	{
 		printf("%d is zero\n", n);
 	}
 
-	n = 0;
-
-	if (n < 0)
+	else
 	{
-		printf("%d is negative\n", n);
+	printf("%d is negative\n", n);
 	}
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
 	return (0);
 }

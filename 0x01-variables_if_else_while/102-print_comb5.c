@@ -8,35 +8,26 @@
 
 int main(void)
 {
-	int digit1 = 0, digit2, digit3, digit4;
+	int digit1 = 0, digit2;
 
-	while (digit1 <= 9)
+	while (digit1 <= 99)
 	{
-		digit2 = 0;
+		digit2 = digit1;
 
-		while (digit2 <= 9)
+		while (digit2 <= 99)
 		{
-			digit3 = digit1;
-			digit4 = digit2 + 1;
-
-			while (digit3 <= 9)
+			if (digit1 != digit2)
 			{
+				putchar((digit1 / 10) + '0');
+				putchar((digit1 & 10) + '0');
+				putchar(' ');
+				putchar((digit2 / 10) + '0');
+				putchar((digit2 % 10) + '0');
 
-				while (digit4 <= 9)
+				if ((digit1 + digit2) != 35)
 				{
-					putchar(digit1 + '0');
-					putchar(digit2 + '0');
+					putchar(',');
 					putchar(' ');
-					putchar(digit3 + '0');
-					putchar(digit4 + '0');
-
-					if ((digit1 + digit2 + digit3 + digit4) != 35)
-					{
-						putchar(',');
-						putchar(' ');
-					}
-
-					digit4++;
 				}
 			}
 			digit2++;
@@ -44,5 +35,6 @@ int main(void)
 		digit1++;
 	}
 	putchar('\n');
+
 	return (0);
 }

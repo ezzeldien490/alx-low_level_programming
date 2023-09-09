@@ -39,8 +39,8 @@ int main(void)
 					digit4++;
 				}
 			}
-			digit2++;
 		}
+		digit2++;
 		digit1++;
 	}
 	putchar('\n');

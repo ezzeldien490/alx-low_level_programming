@@ -17,10 +17,10 @@ int main(void)
 		while (digit2 <= 9)
 		{
 			digit3 = digit1;
+			digit4 = digit2 + 1;
 
 			while (digit3 <= 9)
 			{
-				digit4 = digit2 + 1;
 
 				while (digit4 <= 9)
 				{
@@ -39,8 +39,8 @@ int main(void)
 					digit4++;
 				}
 			}
+			digit2++;
 		}
-		digit2++;
 		digit1++;
 	}
 	putchar('\n');

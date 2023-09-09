@@ -20,12 +20,10 @@ int main(void)
 
 			while (digit3 <= 9)
 			{
-				digit4 = 0;
+				digit4 = digit2++;
 
 				while (digit4 <= 9)
 				{
-					if (digit4 > digit2)
-					{
 					putchar(digit1 + '0');
 					putchar(digit2 + '0');
 					putchar(' ');
@@ -38,7 +36,6 @@ int main(void)
 						putchar(' ');
 					}
 
-					}
 					digit4++;
 				}
 			}

@@ -21,12 +21,12 @@ int main(void)
 			{
 				putchar(digit1 + '0');
 				putchar(digit2 + '0');
-			}
 
-			if ((digit1 + digit2) != 17)
-			{
-				putchar(',');
-				putchar(' ');
+				if ((digit1 + digit2) != 17)
+				{
+					putchar(',');
+					putchar(' ');
+				}
 			}
 			digit2++;
 		}

@@ -20,7 +20,7 @@ int main(void)
 
 			while (digit3 <= 9)
 			{
-				digit4 = digit2++;
+				digit4 = digit2 + 1;
 
 				while (digit4 <= 9)
 				{

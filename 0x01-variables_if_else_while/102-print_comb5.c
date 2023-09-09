@@ -11,14 +11,17 @@ int main(void)
 	int digit1 = 0, digit2, digit3, digit4;
 
 	while (digit1 <= 9)
-		digit2 = 0;
 	{
+		digit2 = 0;
+
 		while (digit2 <= 9)
-			digit3 = digit1;
 		{
+			digit3 = digit1;
+
 			while (digit3 <= 9)
-				digit4 = 0;
 			{
+				digit4 = 0;
+
 				while (digit4 <= 9)
 				{
 					if (digit4 > digit2)
@@ -34,15 +37,15 @@ int main(void)
 						putchar(',');
 						putchar(' ');
 					}
+
 					}
+					digit4++;
 				}
 			}
 			digit2++;
 		}
 		digit1++;
 	}
-
 	putchar('\n');
-
 	return (0);
 }

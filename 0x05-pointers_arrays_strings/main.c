@@ -1,5 +1,4 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
  * main - check the code
@@ -8,11 +7,9 @@
  */
 int main(void)
 {
-    char s1[98];
-    char *ptr;
+    char *str;
 
-    ptr = _strcpy(s1, "First, solve the problem. Then, write the code\n");
-    printf("%s", s1);
-    printf("%s", ptr);
+    str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
+    _puts(str);
     return (0);
 }

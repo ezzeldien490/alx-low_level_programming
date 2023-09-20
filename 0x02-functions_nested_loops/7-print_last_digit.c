@@ -6,7 +6,7 @@
  * @digit: number
  *
  * Return: 0
-*/
+ */
 
 int print_last_digit(int digit)
 {

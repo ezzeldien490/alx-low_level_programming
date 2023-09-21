@@ -26,13 +26,13 @@ int _strcmp(char *s1, char *s2)
 		}
 	}
 	if (a > b)
-        {
-                return (s1[b]);
-        }
-        else if (b < a)
-        {
-                return (s2[a] * -1);
-        }
+	{
+		return (s1[b]);
+	}
+	else if (b < a)
+	{
+		return (s2[a] * -1);
+	}
 
 	return (0);
 }

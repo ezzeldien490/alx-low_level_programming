@@ -13,6 +13,7 @@ int main(void)
 
     ptr = string_toupper(str);
     printf("%s", ptr);
+    printf("ff");
     printf("%s", str);
     return (0);
 }

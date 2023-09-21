@@ -7,15 +7,15 @@
  *
  * Return: *s.
 */
-char *string_toupper(char *s)
+char *string_toupper(char *b)
 {
-
-	for (; *s != '\0'; s++)
+	int i;
+	for (i = 0; b[i] != '\0'; i++)
 	{
-		if (*s >= 'a' && *s <= 'z')
+		if (b[i] >= 'a' && b[i] <= 'z')
 		{
-			*s = *s - 32;
+			b[i] = b[i] - 32;
 		}
 	}
-	return (s);
+	return (b);
 }

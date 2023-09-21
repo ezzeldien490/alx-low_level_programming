@@ -16,7 +16,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	int len2 = strlen(n2);
 	int start;
 	int carry = 0;
-	int k = 0;
+	int k = 0, i, end, j;
 
 	if (len1 > size_r || len2 > size_r)
 	{
@@ -24,7 +24,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 	}
 
 
-	for (int i = len1 - 1, j = len2 - 1; i >= 0 || j >= 0 || carry > 0; i--, k++)
+	for (i = len1 - 1, j = len2 - 1; i >= 0 || j >= 0 || carry > 0; i--, k++)
 	{
 		int digit1 = (i >= 0) ? n1[i] - '0' : 0;
 		int digit2 = (j >= 0) ? n2[j] - '0' : 0;

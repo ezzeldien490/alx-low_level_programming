@@ -1,6 +1,5 @@
-#include "main.h"
+#include <stdio.h>
 #include <string.h>
-
 /**
  * infinite_add - Add up two numbers stored in given char arrays
  * @n1: The first number
@@ -15,35 +14,35 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int len1 = strlen(n1);
 	int len2 = strlen(n2);
+	int start;
+	int carry = 0;
+	int k = 0;
 
 	if (len1 > size_r || len2 > size_r)
 	{
 		return (0);
 	}
 
-	int carry = 0;
-	int i = len1 - 1;
-	int j = len2 - 1;
-	int k = 0;
 
-	while (i >= 0 || j >= 0 || carry > 0)
+	for (int i = len1 - 1, j = len2 - 1; i >= 0 || j >= 0 || carry > 0; i--, k++)
 	{
 		int digit1 = (i >= 0) ? n1[i] - '0' : 0;
 		int digit2 = (j >= 0) ? n2[j] - '0' : 0;
-
 		int sum = digit1 + digit2 + carry;
 
+		r[k] = sum % 10 + '0';
 		carry = sum / 10;
-		r[k] = (sum % 10) + '0';
-		i--;
-		j++;
-		k++;
-		if (k >= size_r)
-		{
-			return (0);
-		}
+		j--;
 	}
-	for (int start = 0, end = k - 1; start < end; start++, end--)
+
+	if (k >= size_r)
+	{
+		return (0);
+	}
+
+	r[k] = '\0';
+
+	for (start = 0, end = k - 1; start < end; start++, end--)
 	{
 		char temp = r[start];
 
@@ -51,6 +50,5 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		r[end] = temp;
 	}
 
-	r[k] = '\0';
 	return (r);
 }

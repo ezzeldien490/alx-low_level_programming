@@ -20,6 +20,6 @@ void print_number(int n)
 	{
 		print_number(b / 10);
 	}
-	
+
 	_putchar((b % 10) + '0');
 }

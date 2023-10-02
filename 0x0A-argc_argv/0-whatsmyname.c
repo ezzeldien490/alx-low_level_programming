@@ -8,7 +8,7 @@
  * Return: 0 for succesful exit
  */
 
-int main(int argc, char* argv[])
+int main(int argc, char *argv[])
 {
 	printf("%s\n", argv[0]);
 

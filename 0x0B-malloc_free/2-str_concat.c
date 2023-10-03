@@ -27,11 +27,13 @@ char *str_concat(char *s1, char *s2)
 
 	if (d == NULL)
 		return (NULL);
-	for (i = 0; s1[i] != 0; i++)
+	i = 0;
+	for (; s1[i] != 0; i++)
 	{
 		d[i] = s1[i];
 	}
-	for (j = 0; s2[j] != 0; j++, i++)
+	j = 0;
+	for (; s2[j] != 0; j++, i++)
 	{
 		d[i] = s2[j];
 	}

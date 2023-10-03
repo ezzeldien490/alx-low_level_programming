@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 /**
- * strtow - concatenates all the arguments of your program.
+ * argstostr - concatenates all the arguments of your program.
  *
  * @ac: size of array av.
  * @av: array.

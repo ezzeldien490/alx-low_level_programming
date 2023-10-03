@@ -8,19 +8,22 @@
  * @c: character.
  *
  * Return: d.
-*/
+ */
 
 char *create_array(unsigned int size, char c)
 {
 	char *d;
 	unsigned int i;
-
-	d = malloc(sizeof(char) * size);
-
-	for (i = 0; i < size; i++)
+	if (size > 0)
 	{
-		d[i] = c;
-	}
+		d = malloc(sizeof(char) * size);
 
-	return (d);
+		for (i = 0; i < size; i++)
+		{
+			d[i] = c;
+		}
+
+		return (d);
+	}
+	exit(0);
 }

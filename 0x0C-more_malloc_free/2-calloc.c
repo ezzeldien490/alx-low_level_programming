@@ -1,7 +1,15 @@
 #include "main.h"
 #include <stdlib.h>
 
-
+/**
+ * _memset - set the specific character to all string.
+ *
+ * @l: string.
+ * @d: specific character.
+ * @n: number of index.
+ *
+ * Return: k.
+*/
 
 
 char *_memset(char *l, int d, int n)

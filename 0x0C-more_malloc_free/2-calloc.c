@@ -1,6 +1,21 @@
 #include "main.h"
 #include <stdlib.h>
 
+
+
+
+char *_memset(char *l, int d, int n)
+{
+	char *k = l;
+	int i;
+
+	for (i = 0; i < n; i++)
+	{
+		k[i] = d;
+	}
+	return (k);
+}
+
 /**
  * _calloc - Allocate memory for array of nmemb elements of size bytes
  * @nmemb: Number of elemnts
@@ -11,20 +26,17 @@
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
 	void *d;
-	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
 	{
 		return (NULL);
 	}
 
-	d = malloc(sizeof(int) * nmemb);
-	if (ar == NULL)
+	d = malloc(size * nmemb);
+	if (d == NULL)
 		return (NULL);
-	while (i < nmemb)
-	{
-		d[i] = 0;
-		i++;
-	}
+
+	_memset(d, 0, (size * nmemb));
+
 	return (d);
 }

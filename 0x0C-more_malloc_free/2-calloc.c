@@ -10,19 +10,21 @@
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *ar;
-	unsigned int ar_size, i;
+	void *d;
+	unsigned int i;
 
 	if (nmemb == 0 || size == 0)
+	{
 		return (NULL);
-	ar_size = nmemb * size;
-	ar = malloc(ar_size);
+	}
+
+	d = malloc(sizeof(int) * nmemb);
 	if (ar == NULL)
 		return (NULL);
-	while (i < ar_size)
+	while (i < nmemb)
 	{
-		ar[i] = 0;
+		d[i] = 0;
 		i++;
 	}
-	return (ar);
+	return (d);
 }

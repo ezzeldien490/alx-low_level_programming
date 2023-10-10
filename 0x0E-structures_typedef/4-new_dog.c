@@ -8,69 +8,62 @@
  *
  * Return: Pointer to dest
  */
-
 char *_strcpy(char *dest, char *src)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; src[i] != 0; i++)
+	while (*(src + i) != 0)
 	{
-		dest[i] = src[i];
+		*(dest + i) = *(src + i);
+		i++;
 	}
-	dest[i] = '\0';
+	*(dest + i) = '\0';
 	return (dest);
 }
 
 /**
- * new_dog - creates a new dog.
+ * new_dog - Create a new dog struct
+ * @name: Name of dog
+ * @age: Age of dog
+ * @owner: Owner of dog
  *
- * @name: name of new dog.
- * @age: age of new dog.
- * @owner: name of owner.
- *
- * Return: d.
-*/
-
+ * Return: pointer to struct, NULL if fails
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *d;
-	char *new_name, *new_owner;
-	int i;
+	dog_t *new_dog;
+	char *new_name;
+	char *new_owner;
+	int len;
 
-	d = malloc(sizeof(dog_t));
-
-	if (d == NULL)
-	{
+	new_dog = malloc(sizeof(dog_t));
+	if (new_dog == NULL)
 		return (NULL);
-	}
-
-	for (i = 0; name[i] != '\0'; i++)
-	{}
-	i++;
-
-	new_name = malloc(sizeof(i));
-
+	len = 0;
+	while (name[len] != '\0')
+		len++;
+	len++;
+	new_name = malloc(len * sizeof(*owner));
 	if (new_name == NULL)
 	{
-		free(d);
+		free(new_dog);
 		return (NULL);
 	}
-
-	for (i = 0; owner[i] != '\0'; i++)
-	{}
-	i++;
-
-	new_owner = malloc(sizeof(i));
+	len = 0;
+	while (name[len] != '\0')
+		len++;
+	len++;
+	new_owner = malloc(len * sizeof(*name));
 	if (new_owner == NULL)
 	{
 		free(new_name);
-		free(d);
+		free(new_dog);
 		return (NULL);
 	}
-		_strcpy(new_name, name);
-		_strcpy(new_owner, owner);
-		d->name = new_name;
-		d->age = age;
-		d->owner = new_owner;
-	return (d);
+	_strcpy(new_name, name);
+	_strcpy(new_owner, owner);
+	new_dog->name = new_name;
+	new_dog->age = age;
+	new_dog->owner = new_owner;
+	return (new_dog);
 }

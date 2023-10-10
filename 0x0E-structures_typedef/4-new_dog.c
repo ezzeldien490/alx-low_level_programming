@@ -11,14 +11,13 @@
 
 char *_strcpy(char *dest, char *src)
 {
-	int i = 0;
+	int i;
 
-	while (*(src + i) != 0)
+	for (i = 0; src[i] != 0; i++)
 	{
-		*(dest + i) = *(src + i);
-		i++;
+		dest[i] = src[i];
 	}
-	*(dest + i) = '\0';
+	dest[i] = '\0';
 	return (dest);
 }
 
@@ -62,20 +61,16 @@ dog_t *new_dog(char *name, float age, char *owner)
 	i++;
 
 	new_owner = malloc(sizeof(i));
-
 	if (new_owner == NULL)
 	{
 		free(new_name);
 		free(d);
 		return (NULL);
 	}
-
 		_strcpy(new_name, name);
 		_strcpy(new_owner, owner);
-
 		d->name = new_name;
 		d->age = age;
 		d->owner = new_owner;
-
 	return (d);
 }

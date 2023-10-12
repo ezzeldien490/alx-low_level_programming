@@ -63,6 +63,7 @@ void print_all(const char * const format, ...)
 {
 	va_list ap;
 	int i, j;
+	char *sep = "";
 
 	print_form_t print_anytype[] = {
 		{"c", print_char},
@@ -80,12 +81,11 @@ void print_all(const char * const format, ...)
 		{
 			if (*print_anytype[j].c == format[i])
 			{
-				print_anytype[j].f(ap);
+				printf("%s", sep);
+				print_anytype[j].f(ap, sep);
 
-				if (format[i + 1] != '\0')
-				{
-					printf(", ");
-				}
+				sep = ", ";
+
 			}
 			j++;
 		}

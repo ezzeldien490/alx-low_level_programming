@@ -83,7 +83,9 @@ void print_all(const char * const format, ...)
 				print_anytype[j].f(ap);
 
 				if (format[i + 1] != '\0')
+				{
 					printf(", ");
+				}
 			}
 			j++;
 		}

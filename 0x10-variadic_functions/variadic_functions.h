@@ -3,6 +3,13 @@
 
 #include <stdarg.h>
 
+/**
+ * struct print_form - print all form of variable.
+ *
+ * @c: character.
+ * @f: function.
+*/
+
 typedef struct print_form
 {
 	char *c;

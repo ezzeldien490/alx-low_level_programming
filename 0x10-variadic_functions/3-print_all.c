@@ -47,10 +47,9 @@ void print_string(va_list ap)
 	j = va_arg(ap, char*);
 
 	if (j == NULL)
-	{
 		printf("(nil)");
-	}
-	printf("%s", j);
+	else
+		printf("%s", j);
 }
 
 /**
@@ -74,7 +73,7 @@ void print_all(const char * const format, ...)
 
 	va_start(ap, format);
 	i = 0;
-	while (format[i] != '\0')
+	while (format != NULL && format[i] != '\0')
 	{
 		j = 0;
 		while (j < 4)

@@ -64,8 +64,7 @@ void print_all(const char * const format, ...)
 	va_list ap;
 	int i, j;
 
-	print_form_t print_anytype[] = 
-	{
+	print_form_t print_anytype[] = {
 		{"c", print_char},
 		{"i", print_integer},
 		{"f", print_float},

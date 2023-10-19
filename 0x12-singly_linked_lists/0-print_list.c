@@ -12,12 +12,12 @@
 
 size_t print_list(const list_t *h)
 {
-	int count;
+	int count = 0;
 
 	list_t *ptr = malloc(sizeof(list_t));
 	*ptr = *h;
 
-	for (count = 0; ptr != NULL; count++)
+	for (; ptr != NULL; count++)
 	{
 		if (ptr->str == NULL)
 			printf("[0] (nil)\n");

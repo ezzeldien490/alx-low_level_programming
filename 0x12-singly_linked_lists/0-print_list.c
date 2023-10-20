@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * rint_list - prints all the elements of a list_t list.
+ * print_list - prints all the elements of a list_t list.
  *
  * @h: linked list
  *

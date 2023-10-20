@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * print_list - prints all the elements of a list_t list.
+ * rint_list - prints all the elements of a list_t list.
  *
  * @h: linked list
  *
@@ -13,7 +13,7 @@
 size_t print_list(const list_t *h)
 {
 	int count = 0;
- 
+
 	for (; h != NULL; count++)
 	{
 		if (h->str == NULL)

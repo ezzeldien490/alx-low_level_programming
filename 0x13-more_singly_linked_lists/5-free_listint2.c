@@ -11,9 +11,10 @@ void free_listint2(listint_t **head)
 	listint_t *nextnode;
 	listint_t *freenode;
 
-	nextnode = freenode = *head;
 	if (head != NULL)
 	{
+
+		nextnode = freenode = *head;
 		while (nextnode != NULL)
 		{
 			freenode = nextnode;

@@ -13,16 +13,20 @@ ssize_t read_textfile(const char *filename, size_t letters)
 {
 	FILE *fp = NULL;
 	char ch;
+	size_t i;
 
 	fp = fopen(filename, "r");
 
 	if (fp == NULL || filename == NULL)
 		return (0);
 
-	while (!feof(fp))
+	for (i = 0; !feof(fp) && i < letters; i++)
 	{
 		ch = fgetc(fp);
 		printf("%c", ch);
 	}
-	return (letters);
+	if (i == letters)
+		return (letters);
+
+	return (i - 1);
 }
